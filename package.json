@@ -1,0 +1,17 @@
+{
+  "name": "child_pids",
+  "version": "1.0.0",
+  "description": "Finds the pids of all children (direct on indirect) of a process.",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Vladimir Angelov",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "is-running": "^2.0.0"
+  }
+}
