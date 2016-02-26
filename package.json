@@ -1,12 +1,16 @@
 {
   "name": "child_pids",
   "version": "1.0.0",
-  "description": "Finds the pids of all children (direct on indirect) of a process.",
+  "description": "Retrieve all pids for a process tree up to certain height.",
   "scripts": {
     "test": "mocha"
   },
   "author": "Vladimir Angelov",
-  "license": "ISC",
+  "license": "MIT",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/vangelov/child_pids"
+  },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
