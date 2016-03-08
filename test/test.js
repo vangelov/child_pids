@@ -1,5 +1,6 @@
 var child_pids = require('../index'),
     chai = require('chai'),
+    proxyquire = require('proxyquire');
     expect = chai.expect;
 
 describe('child_pids', function() {
@@ -14,6 +15,19 @@ describe('child_pids', function() {
             '44': 1,
             '56': 44
         };
+    })
+
+    it('returns an error if the process id cannot be found', function(done) {
+        var childPids = proxyquire('../index', {
+            'is-running': function() {
+                return false;
+            }
+        });
+
+        childPids.find(123, 0, function(err, pids) {
+            expect(err).to.be.ok;
+            done();
+        });
     })
 
     it('parses ps command output', function() {

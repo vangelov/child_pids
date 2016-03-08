@@ -7,13 +7,14 @@
   },
   "author": "Vladimir Angelov",
   "license": "MIT",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/vangelov/child_pids"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vangelov/child_pids"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.4.5"
+    "mocha": "^2.4.5",
+    "proxyquire": "^1.7.4"
   },
   "dependencies": {
     "is-running": "^2.0.0"

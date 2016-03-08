@@ -4,9 +4,7 @@ var childProcess = require('child_process'),
 
 function find(parentPid, maxDepth, callback) {
     if(!isRunning(parentPid)) {
-        return process.nextTick(function() {
-            callback(null, new Error('The parent pid could not be found.'));
-        });
+        return process.nextTick(callback.bind(null, new Error('The parent pid could not be found.'), null));
     }
 
     loadPsInfo(function(err, pids, parentPidMap) {
