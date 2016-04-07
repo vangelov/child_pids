@@ -16,8 +16,6 @@ childs_pids.find(parentPid, maxDepth, function(err, pids) {
 });
 
 ```
-you will need to install eyespect to run the above example
-`npm install eyespect`
 
 ### Test
 To run the tests execute
