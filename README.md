@@ -1,5 +1,5 @@
 # child_pids
-Retrieve all pids for a process tree up to certain height.
+Retrieve all pids in a process tree up to certain height.
 
 ## Installation
 `npm install child_pids`
@@ -7,12 +7,14 @@ Retrieve all pids for a process tree up to certain height.
 ## Usage
 
 ```javascript
-var childs_pids = require('child_pids'),
-    parentPid = 56
-    maxDepth = 0; // all children. if > 0 only children to that height of the process tree are returned
+var childPids = require('child_pids'),
+var parentPid = 56
+var maxDepth = 0; // all children. if > 0 only children to that height of the process tree are returned
 
-childs_pids.find(parentPid, maxDepth, function(err, pids) {
-    console.log('Children pids', pids);
+childPids.find(parentPid, maxDepth, function(err, pids) {
+    if(!err) {
+        console.log('Children pids: ', pids);
+    }
 });
 
 ```

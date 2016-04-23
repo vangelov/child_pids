@@ -1,6 +1,6 @@
 {
   "name": "child_pids",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Retrieve all pids for a process tree up to certain height.",
   "scripts": {
     "test": "mocha"
